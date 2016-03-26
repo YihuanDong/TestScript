@@ -1,0 +1,112 @@
+tool,time,userCmd,isGitCommand,gitCommand,isError,result,hasSolution,isSatisfy
+shell,22 Mar 2016 00:55:23,"['git', 'status']",True,status,False,"# On branch mac
+# Changes not staged for commit:
+#   (use ""git add <file>..."" to update what will be committed)
+#   (use ""git checkout -- <file>..."" to discard changes in working directory)
+#
+#	modified:   ../decision_tree/log.csv
+#	modified:   shell.py
+#
+no changes added to commit (use ""git add"" and/or ""git commit -a"")
+",,
+shell,22 Mar 2016 00:55:37,"['git', 'branch']",True,branch,False,"  decision_tree
+* mac
+  master
+",,
+shell,22 Mar 2016 00:55:55,"['git', 'branch', 'halllo']",True,branch,False,,,
+shell,22 Mar 2016 00:56:11,"['git', 'branch', 'delete', 'halllo']",True,branch,False,,,
+shell,22 Mar 2016 00:56:17,"['git', 'branch']",True,branch,False,"  decision_tree
+  delete
+  halllo
+* mac
+  master
+",,
+shell,22 Mar 2016 00:56:27,"['git', 'branch', '-d', 'delete']",True,branch,False,"Deleted branch delete (was 68b8169).
+",,
+shell,22 Mar 2016 00:56:33,"['git', 'branch', '-d', 'halllo']",True,branch,False,"Deleted branch halllo (was 68b8169).
+",,
+shell,22 Mar 2016 00:56:37,"['git', 'branch']",True,branch,False,"  decision_tree
+* mac
+  master
+",,
+shell,22 Mar 2016 00:56:44,"['git', 'checkout', 'hello']",True,checkout,True,"error: pathspec 'hello' did not match any file(s) known to git.
+",,
+shell,22 Mar 2016 00:56:52,"['git', 'status']",True,status,False,"# On branch mac
+# Changes not staged for commit:
+#   (use ""git add <file>..."" to update what will be committed)
+#   (use ""git checkout -- <file>..."" to discard changes in working directory)
+#
+#	modified:   ../decision_tree/log.csv
+#	modified:   shell.py
+#
+no changes added to commit (use ""git add"" and/or ""git commit -a"")
+",,
+shell,22 Mar 2016 00:56:59,"['git', 'add', 'shell.py']",True,add,False,,,
+shell,22 Mar 2016 00:57:10,"['git', 'commi']",True,commi,True,"git: 'commi' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	commit
+	column
+	config
+",,
+shell,22 Mar 2016 00:57:28,"['git', 'commit', '-m', '""Shell working on mac"" ']",True,commit,False,"[mac 43e36f7] ""Shell working on mac""
+ 1 file changed, 49 insertions(+), 20 deletions(-)
+",,
+shell,22 Mar 2016 00:57:44,"['git', 'push']",True,push,True,"warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+To https://github.com/nikign/Git-Helper.git
+   68b8169..43e36f7  mac -> mac
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/nikign/Git-Helper.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you did not intend to push that branch, you may want to
+hint: specify branches to push or set the 'push.default' configuration variable
+hint: to 'simple', 'current' or 'upstream' to push only the current branch.
+",,
+shell,22 Mar 2016 00:58:40,"['git', 'push', 'mac']",True,push,True,"warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: 'mac' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+",,
+shell,22 Mar 2016 00:58:47,"['git', 'push', 'origin', 'mac']",True,push,False,"Everything up-to-date
+",,
+shell,22 Mar 2016 00:59:22,"['git', 'status']",True,status,False,"# On branch mac
+# Changes not staged for commit:
+#   (use ""git add <file>..."" to update what will be committed)
+#   (use ""git checkout -- <file>..."" to discard changes in working directory)
+#
+#	modified:   ../decision_tree/log.csv
+#
+no changes added to commit (use ""git add"" and/or ""git commit -a"")
+",,
+shell,22 Mar 2016 02:00:02,"['cd', '..']",False,,False,,,
+shell,22 Mar 2016 02:00:05,"['cd', '..']",False,,False,,,
+shell,22 Mar 2016 02:00:07,"['cd', '..']",False,,False,,,
+shell,22 Mar 2016 02:00:14,['quit'],False,,,,,
