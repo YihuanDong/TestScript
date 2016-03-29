@@ -12,4 +12,4 @@ If you are **Group Member A**: Please substitute the stars in the bracket with "
 
 If you are **Group Member B**: Please substitute the stars in the bracket with "Group member B made some edits here"
 
-Then, please save the file.
+Then,please save the file.
